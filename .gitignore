@@ -1,2 +1,4 @@
 .vscode
-b.txt
+b.tx
+package-lock.json
+package.json
