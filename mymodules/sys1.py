@@ -1,12 +1,18 @@
 import sys
+import os
 
-print(sys.argv, len(sys.argv))
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(mysys))))
 
-sa = sys.argv
-if len(sa) < 2:
+from .. import mysys
+mysys.clear()
+
+argv = sys.argv
+print("sys argv>> ",argv, len(argv))
+
+if len(argv) < 2:
     sys.exit()
 
-with open(sa[1], 'r', encoding="utf-8") as file:
+with open(argv[1], "r", encoding="utf-8") as file:
     for line in file:
         print(line)
-
+ 
