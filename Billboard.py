@@ -12,7 +12,8 @@ class Billboard:
     
     def get_text(self, parent_tag, selector):
         tag = self.get_tag(parent_tag, selector)
-        return tag.text.strip()
+        trans_text = tag.text.strip()
+        return trans_text
 
     def get_tag(self, parent_tag, selector):
         tag = parent_tag.select_one(selector)
